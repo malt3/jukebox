@@ -1,0 +1,9 @@
+[Distribution]
+Distribution=fedora
+Release=36
+#Architecture=aarch64
+
+[Output]
+Bootable=yes
+CompressOutput=yes
+OutputDirectory=mkosi.output

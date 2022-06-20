@@ -1,0 +1,28 @@
+name: Build OS image
+on: [push]
+jobs:
+  aarch64_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+      - name: Setup mkosi
+        uses: systemd/mkosi@v12
+      - run: sudo mkosi build
+#      - name: Run mkosi on aarch64
+#        uses: uraimo/run-on-arch-action@v2
+#        with:
+#          arch: aarch64
+#          distro: fedora_latest
+          #dockerRunArgs: |
+          #  --volume "${PWD}/:/host"
+          #  --workdir /host
+#          install: |
+#            dnf -y update
+#            dnf -y install mkosi
+#          run: |
+#            mkosi build
+      - name: Inspect artifacts
+        run: ls -la
+#      - name: compress
+#        run: tar cfJ image.tar.xz image.*
