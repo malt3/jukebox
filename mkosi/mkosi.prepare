@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+find / -name dnf.conf 2>/dev/null

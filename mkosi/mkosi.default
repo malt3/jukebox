@@ -1,0 +1,72 @@
+[Distribution]
+Distribution=fedora
+Release=36
+#Architecture=aarch64
+#UseHostRepositories=yes
+
+[Content]
+Packages=
+     ffmpeg
+     #libswresample.so.4
+     #libavformat.so.59
+     #libavcodec.so.59
+     #libavutil.so.57
+     libgcrypt
+     #libgcrypt.so.20
+     libsodium
+     #libsodium.so.23
+     libplist
+     #libplist-2.0.so.3
+     alsa-lib
+     avahi
+     avahi-libs
+     avahi-tools
+     #libasound.so.2
+     #libavahi-common.so.3
+     #libavahi-client.so.3
+     soxr
+     #libsoxr.so.0
+     libconfig
+     #libconfig.so.11
+     libgpg-error
+     #libgpg-error.so.0
+BuildPackages=
+     git
+     rpm
+     rpm-build
+     vim-enhanced
+     make
+     gcc
+     gcc-c++
+     kernel-devel
+     alsa-lib-devel
+     autoconf
+     automake
+     avahi-devel
+     libconfig-devel
+     libdaemon-devel
+     openssl-devel
+     popt-devel
+     soxr-devel
+     libplist-devel
+     libsodium-devel
+     libgcrypt-devel
+     libuuid-devel
+     ffmpeg-devel
+SourceFileTransfer=copy-all
+BuildSources=mkosi.sources
+WithNetwork=yes
+
+[Output]
+Bootable=yes
+#CompressOutput=yes
+OutputDirectory=mkosi.output
+
+[Host]
+QemuHeadless=yes
+#QemuArgs="-soundhw hda"
+NetworkVeth=yes
+
+[Validation]
+Password=
+Autologin=yes
