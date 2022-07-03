@@ -1,0 +1,10 @@
+libswresample3
+libavcodec58
+libavutil56
+libsodium23
+libplist3
+libmosquitto1
+libsndfile1
+libavahi-client3
+libsoxr0
+libconfig9

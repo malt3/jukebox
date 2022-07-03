@@ -1,0 +1,2 @@
+force_eeprom_read=0
+dtoverlay=hifiberry-dacplus
